@@ -1,8 +1,8 @@
 {
   "name": "portfolio",
   "version": "0.1.0",
-  "homepage": "http://starry-shivam.github.io",
-  "private": true,
+  "homepage": "https://starry-shivam.github.io",
+  "private": false,
   "dependencies": {
     "@react-pdf/renderer": "^2.2.0",
     "@testing-library/jest-dom": "^5.16.2",
