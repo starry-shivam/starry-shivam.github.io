@@ -4,27 +4,33 @@ import {
   SiLinux,
   SiVisualstudiocode,
   SiAndroidstudio,
-  SiHeroku,
-  SiFedora,
+  SiPycharm,
+  SiIntellijidea,
+  SiUbuntu,
 } from "react-icons/si";
 
 function Toolstack() {
   return (
     <Row style={{ justifyContent: "center", paddingBottom: "50px" }}>
       <Col xs={4} md={2} className="tech-icons">
-        <SiLinux />
+        <SiAndroidstudio />
       </Col>
       <Col xs={4} md={2} className="tech-icons">
         <SiVisualstudiocode />
       </Col>
+
       <Col xs={4} md={2} className="tech-icons">
-        <SiAndroidstudio />
+        <SiIntellijidea />
       </Col>
       <Col xs={4} md={2} className="tech-icons">
-        <SiFedora />
+        <SiLinux />
+      </Col>
+
+      <Col xs={4} md={2} className="tech-icons">
+        <SiPycharm />
       </Col>
       <Col xs={4} md={2} className="tech-icons">
-        <SiHeroku />
+        <SiUbuntu />
       </Col>
     </Row>
   );

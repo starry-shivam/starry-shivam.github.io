@@ -19,40 +19,39 @@ function Home2() {
               LET ME <span className="purple"> INTRODUCE </span> MYSELF
             </h1>
             <p className="home-about-body">
-              I'm Shivam, a computer science student and self taught programmer
-              from India
+              I'm a self taught programmer and a computer science student from
+              india, i love open source development and have contributed to lots
+              of small and big open source projects in the last three years!
               <br />
               <br />
-              I'm currently learning
+              I'm currently spending most of my time learning&nbsp;
               <i>
                 <b className="purple">
-                  {" "}
-                  Kotlin, Android development and UI/UX design.{" "}
+                  Kotlin, Android development and UI/UX design.
                 </b>
               </i>
+              I'm also skilled in&nbsp;
+              <i>
+                <b className="purple">Python</b>
+              </i>
+              &nbsp;with a decent experience in building projects which interact
+              with the&nbsp;
+              <i>
+                <b className="purple">internet</b>
+              </i>
+              &nbsp;via&nbsp;
+              <i>
+                <b className="purple">REST APIs</b>
+              </i>
+              &nbsp;and such.
               <br />
-              <br />I love open source development and have contributed to lots
-              of open source projects in past few years, apart from my main
-              coding languages &nbsp;
-              <i>
-                <b className="purple">Python</b>,&nbsp;
-              </i>
-              <i>
-                <b className="purple">C and SQL.</b>&nbsp;
-              </i>
-              I play around with other programming languages and discover new
-              things along the way.
               <br />
-              <br />
-              Whenever possible, I also apply my passion for developing projects
-              using <b className="purple"> self-developed APIs</b> and
+              Apart from these I also like to play around with other languages
+              like&nbsp;
               <i>
-                <b className="purple"> Open Source Libraries & Frameworks</b>
+                <b className="purple">C/C++ & Java</b>
               </i>
-              &nbsp; like
-              <i>
-                <b className="purple"> Flask and Android Jetpack Compose</b>
-              </i>
+              &nbsp;and discover new things along the way.
             </p>
           </Col>
           <Col md={4} className="myAvtar">

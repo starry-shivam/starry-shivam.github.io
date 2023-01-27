@@ -24,7 +24,7 @@ function Projects() {
               imgPath={myne}
               isBlog={false}
               title="Myne"
-              description="Myne is a FOSS Android application to download ebooks from the Project GutenBerg, it uses GutenDex API to fetch metadata of ebooks in the backend. The name of the app is inspired from the main character of an anime called Ascendance of a Bookworm."
+              description="An android app to download ebooks from Project Gutenberg, using GutenDex API in the backend."
               ghLink="https://github.com/Pool-Of-Tears/Myne"
             />
           </Col>
@@ -34,7 +34,7 @@ function Projects() {
               imgPath={greenstash}
               isBlog={false}
               title="GreenStash"
-              description="GreenStash is a simple FOSS android app to help you plan and manage your savings goals easily and establish the habit of saving money."
+              description="An android app to help you plan and manage your savings goals easily and establish the habit of saving money."
               ghLink="https://github.com/Pool-Of-Tears/GreenStash"
             />
           </Col>
@@ -55,7 +55,7 @@ function Projects() {
               isBlog={false}
               title="αcutєвσt"
               description="Modular telegram bot to get information about your favourite anime, movies, and TV shows. "
-              ghLink="https://github.com/starry-shivam/acutebot"
+              tgLink="https://t.me/acutebot"
             />
           </Col>
         </Row>

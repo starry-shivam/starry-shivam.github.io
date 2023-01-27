@@ -8,12 +8,13 @@ function AboutCard() {
       <Card.Body>
         <blockquote className="blockquote mb-0">
           <p style={{ textAlign: "justify" }}>
-            Hi everyone, I'm <span className="purple">Starry Shivam </span>
-            from <span className="purple">India.</span>
-            <br />I am a sophomore studying Computer Science.
+            Hey there! I'm Shivam, most of the things which matter are already
+            there on the homepage :)
             <br />
             <br />
-            Apart from coding, some other activities that I love to do!
+            <br />
+            Apart from those here's some of my hobbies which i keep myself busy
+            in my free time.
           </p>
           <ul>
             <li className="about-activity">
@@ -28,10 +29,11 @@ function AboutCard() {
           </ul>
 
           <p style={{ color: "rgb(155 126 172)" }}>
-            "If you win, you live. If you lose, you die. If you don’t fight, you
-            can’t win!"{" "}
+            Maybe there's only a dark road up ahead. But you still have to
+            believe and keep going. Believe that the stars will light your path,
+            even a little bit. Come on... Let's go on a journey!
           </p>
-          <footer className="blockquote-footer">Eren Yaeger</footer>
+          <footer className="blockquote-footer">Kaori Miyazono</footer>
         </blockquote>
       </Card.Body>
     </Card>
