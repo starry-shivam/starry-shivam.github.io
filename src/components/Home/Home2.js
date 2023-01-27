@@ -30,7 +30,7 @@ function Home2() {
                   Kotlin, Android development and UI/UX design.
                 </b>
               </i>
-              I'm also skilled in&nbsp;
+              &nbsp;I'm also skilled in&nbsp;
               <i>
                 <b className="purple">Python</b>
               </i>

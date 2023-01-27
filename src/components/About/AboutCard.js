@@ -14,7 +14,7 @@ function AboutCard() {
             <br />
             <br />
             Apart from those here's some of my hobbies which i keep myself busy
-            in my free time.
+            with in my free time.
           </p>
           <ul>
             <li className="about-activity">
