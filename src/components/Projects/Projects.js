@@ -3,9 +3,11 @@ import { Container, Row, Col } from "react-bootstrap";
 import ProjectCard from "./ProjectCards";
 import Particle from "../Particle";
 import acutebot from "../../Assets/Projects/acutebot.png";
-import superhero from "../../Assets/Projects/superhero.png";
-import myne from "../../Assets/Projects/myne.png";
-import greenstash from "../../Assets/Projects/greenstash.png";
+import superhero from "../../Assets/Projects/superhero.heif";
+import myne from "../../Assets/Projects/myne.heif";
+import greenstash from "../../Assets/Projects/greenstash.heif";
+import bitgapps from "../../Assets/Projects/bitgapps.heif";
+import fileutils from "../../Assets/Projects/fileutils.heif";
 
 function Projects() {
   return (
@@ -41,6 +43,26 @@ function Projects() {
 
           <Col md={4} className="project-card">
             <ProjectCard
+              imgPath={bitgapps}
+              isBlog={false}
+              title="BitGapps"
+              description="A Custom Google Apps Package which contain Minimal, But has all the required Google Applications to get Google Services functionality."
+              wsLink="https://bitgapps.io/polaris.html"
+            />
+          </Col>
+
+          <Col md={4} className="project-card">
+            <ProjectCard
+              imgPath={fileutils}
+              isBlog={false}
+              title="FilteUtils"
+              description="Small library to get file path from most kinds of content Uri in Android. For example: internal/external storage Uri, Google Drive uri, Google Photos Uri, WhatsApp files Uri and more!"
+              ghLink="https://github.com/starry-shivam/FileUtils"
+            />
+          </Col>
+
+          <Col md={4} className="project-card">
+            <ProjectCard
               imgPath={superhero}
               isBlog={false}
               title="Superhero Quotes API"
@@ -54,7 +76,7 @@ function Projects() {
               imgPath={acutebot}
               isBlog={false}
               title="αcutєвσt"
-              description="Modular telegram bot to get information about your favourite anime, movies, and TV shows. "
+              description="Modular telegram bot to get information about your favourite anime, movies, and TV shows."
               tgLink="https://t.me/acutebot"
             />
           </Col>
