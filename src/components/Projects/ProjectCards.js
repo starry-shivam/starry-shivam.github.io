@@ -1,7 +1,7 @@
 import React from "react";
 import Card from "react-bootstrap/Card";
 import Button from "react-bootstrap/Button";
-import { BsGithub, BsTelegram } from "react-icons/bs";
+import { BsGithub, BsGlobe2, BsTelegram } from "react-icons/bs";
 
 function ProjectCards(props) {
   return (
@@ -13,21 +13,30 @@ function ProjectCards(props) {
           {props.description}
         </Card.Text>
 
-        {/* if not no tg link present ignore */}
-        {!props.tgLink && (
+        {/* if no tg link present ignore */}
+        {props.ghLink && (
         <Button variant="primary" href={props.ghLink} target="_blank">
           <BsGithub /> &nbsp;
           {"GitHub"}
         </Button>
         )}
         
-        {/* if not no tg link present ignore */}
-        {!props.ghLink && (
+        {/* if no gh link present ignore */}
+        {props.tgLink && (
         <Button variant="primary" href={props.tgLink} target="_blank">
           <BsTelegram /> &nbsp;
           {"Telegram"}
         </Button>
         )}
+
+        {/* if website link not present */}
+        {!props.ghLink && !props.tgLink && (
+        <Button variant="primary" href={props.wsLink} target="_blank">
+          <BsGlobe2 /> &nbsp;
+          {"Website"}
+        </Button>
+        )}
+
         {"\n"}
       </Card.Body>
     </Card>
