@@ -87,6 +87,36 @@
       object-fit: cover;
       box-shadow: 0 0 20px rgba(122,162,247,0.35);
       }
+      .socials {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      flex-wrap: wrap;
+      }
+      /* Center on mobile */
+      @media (max-width: 700px) {
+      .socials {
+      justify-content: center;
+      }
+      }
+      .social-icon {
+      width: 20px; /* smaller */
+      height: 20px;
+      filter: invert(0);
+      transition: transform 0.2s ease, opacity 0.2s ease;
+      opacity: 0.85;
+      vertical-align: middle;
+      }
+      .social-icon:hover {
+      transform: translateY(-2px) scale(1.05);
+      opacity: 1;
+      }
+      /* Dark mode auto white */
+      @media (prefers-color-scheme: dark) {
+      .social-icon {
+      filter: invert(1);
+      }
+      }
       p {
       font-family: "Inter", sans-serif;
       font-weight: 400;
@@ -224,8 +254,20 @@
         </script>
         <p><img src="https://komarev.com/ghpvc/?username=starry-shivam&style=flat&abbreviated=true" alt="Profile Views"></p>
         <p>
-          <a href="https://github.com/starry-shivam" target="_blank">GitHub</a> ·
-          <a href="https://twitter.com/starry_shivam" target="_blank">Twitter</a>
+        <p class="socials">
+          <a href="https://github.com/starry-shivam" target="_blank">
+          <img class="social-icon" src="https://cdn.simpleicons.org/github/000" alt="GitHub">
+          </a>
+          <a href="https://twitter.com/starry_shivam" target="_blank">
+          <img class="social-icon" src="https://cdn.simpleicons.org/x/000" alt="Twitter">
+          </a>
+          <a href="https://starryboi.t.me" target="_blank">
+          <img class="social-icon" src="https://cdn.simpleicons.org/telegram/000" alt="Telegram">
+          </a>
+          <a href="mailto:starry@krsh.dev">
+          <img class="social-icon" src="https://cdn.simpleicons.org/maildotru/000" alt="Email">
+          </a>
+        </p>
         </p>
       </div>
     </section>
