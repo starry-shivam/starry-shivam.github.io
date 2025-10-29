@@ -132,13 +132,6 @@
       .section {
       margin-top: 3rem;
       }
-      footer {
-      text-align: center;
-      margin-top: 3rem;
-      opacity: 0.6;
-      font-size: 0.85rem;
-      font-family: "Inter", sans-serif;
-      }
       /* Tech Stack scroll container */
       .skills-container {
       width: 100%;
@@ -186,6 +179,14 @@
       transform: translateY(-4px);
       box-shadow: 0 6px 15px rgba(122,162,247,0.25);
       }
+      footer {
+      text-align: center;
+      opacity: 0.7;
+      font-size: 0.9rem;
+      margin-top: 3rem;
+      padding-bottom: 1.5rem;
+      font-family: "Inter", sans-serif;
+      }
       /* Align emojis nicely with text */
       .emoji {
       vertical-align: middle;
@@ -229,7 +230,7 @@
           or reading fantasy novels.
         </p>
         <script>
-          const start = new Date(2020, 8, 24);
+          const start = new Date(2020, 7, 24);
           const now = new Date();
           
           let years = now.getFullYear() - start.getFullYear();
@@ -253,7 +254,6 @@
           document.getElementById("exp-years").textContent = text;
         </script>
         <p><img src="https://komarev.com/ghpvc/?username=starry-shivam&style=flat&abbreviated=true" alt="Profile Views"></p>
-        <p>
         <p class="socials">
           <a href="https://github.com/starry-shivam" target="_blank">
           <img class="social-icon" src="https://cdn.simpleicons.org/github/000" alt="GitHub">
@@ -267,7 +267,6 @@
           <a href="mailto:starry@krsh.dev">
           <img class="social-icon" src="https://cdn.simpleicons.org/maildotru/000" alt="Email">
           </a>
-        </p>
         </p>
       </div>
     </section>
@@ -298,7 +297,12 @@
       </p>
     </section>
     <footer>
-      © 2025 Shivam — Built once, never updated again.
+      <p id="footer-text"></p>
     </footer>
+    <script>
+      const year = new Date().getFullYear();
+      document.getElementById("footer-text").textContent =
+        `© ${year} Shivam — This website ages like fine wine… unattended.`;
+    </script>
   </body>
 </html>
