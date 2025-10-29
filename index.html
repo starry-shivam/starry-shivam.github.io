@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Shivam – Portfolio</title>
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Poppins:wght@600;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
     <style>
       :root {
       --bg-light: #ffffff;
@@ -33,7 +35,36 @@
       padding: 2rem;
       line-height: 1.6;
       }
-      a { text-decoration: none; }
+      /* Smooth theme + UI transitions */
+      body, a, h1, h2, p, footer {
+      transition: all 0.35s ease;
+      }
+      /* Rounded modern heading font */
+      h1, h2 {
+      margin: 0.2em 0;
+      font-family: "Poppins", sans-serif;
+      font-weight: 700;
+      letter-spacing: 0.3px;
+      }
+      a { 
+      text-decoration: none; 
+      position: relative;
+      font-weight: 500;
+      }
+      /* Animated underline */
+      a::after {
+      content: "";
+      position: absolute;
+      left: 0; bottom: -2px;
+      width: 0%;
+      height: 2px;
+      background: var(--accent);
+      transition: width 0.25s ease;
+      border-radius: 3px;
+      }
+      a:hover::after {
+      width: 100%;
+      }
       .intro-container {
       display: flex;
       flex-direction: column;
@@ -56,8 +87,17 @@
       object-fit: cover;
       box-shadow: 0 0 20px rgba(122,162,247,0.35);
       }
-      h1, h2 {
-      margin: 0.2em 0;
+      p {
+      font-family: "Inter", sans-serif;
+      font-weight: 400;
+      }
+      /* Reset spans so years isn't monospace */
+      span {
+      font-family: "Inter", sans-serif;
+      }
+      /* JetBrains only where useful */
+      .stats-img {
+      font-family: "JetBrains Mono", monospace;
       }
       .section {
       margin-top: 3rem;
@@ -67,6 +107,7 @@
       margin-top: 3rem;
       opacity: 0.6;
       font-size: 0.85rem;
+      font-family: "Inter", sans-serif;
       }
       /* Tech Stack scroll container */
       .skills-container {
@@ -75,6 +116,8 @@
       padding-bottom: 4px;
       -webkit-overflow-scrolling: touch;
       text-align: center;
+      scrollbar-width: thin;
+      scrollbar-color: var(--accent) transparent;
       }
       .skills-container img {
       max-width: none;
@@ -101,10 +144,49 @@
       max-width: 46%;
       }
       }
+      /* Floating hover effect */
+      .avatar,
+      .stats-img,
+      .skills-container img {
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      }
+      .avatar:hover,
+      .stats-img:hover,
+      .skills-container img:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 6px 15px rgba(122,162,247,0.25);
+      }
+      /* Align emojis nicely with text */
+      .emoji {
+      vertical-align: middle;
+      }
+      /* Hand emoji before link */
+      .link-emoji {
+      vertical-align: middle;
+      margin-right: 6px;
+      }
+      /* Improve link spacing & hit area */
+      .projects-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      }
+      /* Fade-in Reveal */
+      .fade-in {
+      opacity: 0;
+      transform: translateY(10px);
+      animation: fadeInUp 0.6s ease forwards;
+      }
+      @keyframes fadeInUp {
+      to {
+      opacity: 1;
+      transform: translateY(0);
+      }
+      }
     </style>
   </head>
   <body>
-    <section class="intro-container">
+    <section class="intro-container fade-in">
       <img class="avatar" src="https://avatars.githubusercontent.com/u/58552395?v=4" alt="Shivam Profile Picture">
       <div class="intro-text">
         <h1>Hi! It's Shivam <img src="https://raw.githubusercontent.com/MartinHeinz/MartinHeinz/master/wave.gif" width="28"></h1>
@@ -117,7 +199,7 @@
           or reading fantasy novels.
         </p>
         <script>
-          const start = new Date(2020, 7, 24);
+          const start = new Date(2020, 8, 24);
           const now = new Date();
           
           let years = now.getFullYear() - start.getFullYear();
@@ -147,23 +229,31 @@
         </p>
       </div>
     </section>
-    <section class="section">
-      <h2>Tech Stack <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Animals/Penguin.png" width="30"></h2>
+    <section class="section fade-in">
+      <h2>Tech Stack <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Animals/Dove.png" alt="Dove" width="25" height="25" /></h2>
       <div class="skills-container">
         <img src="https://skillicons.dev/icons?i=kotlin,java,python,c,cpp,androidstudio,idea,vscode,linux,git,github,firebase,githubactions,flask,html,markdown,sqlite,mysql,postgres,redis" alt="Skills">
       </div>
     </section>
-    <section class="section">
-      <h2>GitHub Stats <img src="https://emojis.slackmojis.com/emojis/images/1621024394/39092/cat-roll.gif" width="22"></h2>
+    <section class="section fade-in">
+      <h2>GitHub Stats <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Animals/Butterfly.png" alt="Butterfly" width="25" height="25" /></h2>
       <div class="stats-wrapper">
         <img class="stats-img" src="https://raw.githubusercontent.com/starry-shivam/github-stats-transparent/output/generated/overview.svg" alt="Stats Overview">
         <img class="stats-img" src="https://raw.githubusercontent.com/starry-shivam/github-stats-transparent/output/generated/languages.svg" alt="Most Used Languages">
       </div>
     </section>
-    <section class="section">
-      <h2>Projects 🚀</h2>
+    <section class="section fade-in">
+      <h2>
+        Projects
+        <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Animals/Fallen%20Leaf.png" alt="Fallen Leaf" width="25" height="25" />
+      </h2>
       <p>Too lazy to update this website 😴 — check out my GitHub for cool stuff:</p>
-      <p><a href="https://github.com/starry-shivam" target="_blank">👉 github.com/starry-shivam</a></p>
+      <p>
+        <a class="projects-link" href="https://github.com/starry-shivam" target="_blank">
+        <img class="link-emoji" src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Hand%20gestures/Backhand%20Index%20Pointing%20Right.png" alt="Pointing" width="22" height="22" />
+        github.com/starry-shivam
+        </a>
+      </p>
     </section>
     <footer>
       © 2025 Shivam — Built once, never updated again.
